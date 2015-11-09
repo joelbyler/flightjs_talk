@@ -1,0 +1,14 @@
+<%= form_for(@example) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br/>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br/>
+
+
+  <%= f.submit 'Save' %>
+  <%= link_to 'Cancel', examples_path %>
+<% end %>
