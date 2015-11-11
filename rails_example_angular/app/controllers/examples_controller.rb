@@ -37,6 +37,6 @@ class ExamplesController < ApplicationController
     end
 
     def example_params
-      params.require(:example).permit(:name)
+      params.require(:example).permit(:name, :email, :gender, :agree)
     end
 end

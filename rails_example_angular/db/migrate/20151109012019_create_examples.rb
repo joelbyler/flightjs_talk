@@ -4,6 +4,7 @@ class CreateExamples < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.integer :gender
+      t.boolean :agree
       t.timestamps null: false
     end
   end

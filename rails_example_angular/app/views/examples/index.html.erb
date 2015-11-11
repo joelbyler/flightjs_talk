@@ -4,6 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Agree</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
     <% @examples.each do |example| %>
       <tr>
         <td><%= example.name %></td>
+        <td><%= example.email %></td>
+        <td><%= example.gender %></td>
+        <td><%= example.agree %></td>
         <td><%= link_to 'Edit', edit_example_path(example) %></td>
         <td><%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

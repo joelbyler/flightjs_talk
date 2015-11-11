@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20151109012019) do
     t.string   "name"
     t.string   "email"
     t.integer  "gender"
+    t.boolean  "agree"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
