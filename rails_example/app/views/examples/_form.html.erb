@@ -8,6 +8,14 @@
   <%= f.text_field :email %>
   <br/>
 
+  <%= f.label :gender %>
+  <%= @example.gender %>
+  <%= f.radio_button :gender, :male %> Male
+  <%= f.radio_button :gender, :female %> Female
+  <br />
+
+  <%= f.check_box :agree %> <%= f.label :agree %>
+  <br />
 
   <%= f.submit 'Save' %>
   <%= link_to 'Cancel', examples_path %>

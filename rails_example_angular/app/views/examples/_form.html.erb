@@ -1,0 +1,32 @@
+<%= form_for(@example) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, "ng-model" => "user.name" %>
+  <br/>
+
+  <%= f.label :email %>
+  <%= f.text_field :email, "ng-model" => "user.email" %>
+  <br/>
+  <%= f.radio_button :gender, 0 %>
+  <%= f.radio_button :autolyse, 1 %>
+
+  <%= f.submit 'Save', "ng-click" => "update(user)" %>
+  <%= link_to 'Cancel', examples_path %>
+<% end %>
+
+<script>
+  angular.module('formExample', [])
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.master = {};
+
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+      };
+
+      $scope.reset();
+    }]);
+</script>
