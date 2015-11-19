@@ -14,22 +14,3 @@
 //= require jquery_ujs
 //= require angular
 //= require_tree .
-
-angular.module('AngularDemoApp', [])
-.controller("ExampleController", ['$scope', function($scope) {
-  $scope.example = {};
-  
-  $scope.update = function(example) {
-    $scope.master = angular.copy(example);
-  };
-
-  $scope.reset = function(form) {
-    if (form) {
-      form.$setPristine();
-      form.$setUntouched();
-    }
-    $scope.user = angular.copy($scope.master);
-  };
-
-  $scope.reset();
-}]);
