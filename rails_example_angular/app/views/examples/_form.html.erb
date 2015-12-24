@@ -17,7 +17,7 @@
     <%= f.check_box :agree, "ng-model" => "example.agree" %> <%= f.label :agree %>
     <br />
 
-    <%= f.submit 'Save', "ng-click" => "update(example)" %>
+    <%= f.submit 'Save', class: 'btn', "ng-click" => "update(example)" %>
     <%= link_to 'Cancel', examples_path %>
   <% end %>
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :examples
+  resources :happy, only: [:index]
 
   root 'examples#index'
 

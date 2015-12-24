@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="container">
   <% unless notice.nil? %><p><%= notice %></p> <% end %>
   <% unless alert.nil?  %><p><%= alert  %></p> <% end %>
   <%= yield %>
