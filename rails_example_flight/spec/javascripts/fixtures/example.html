@@ -1,0 +1,25 @@
+<div class="example-form">
+  <form class="edit_example" id="edit_example_2" action="/examples/2" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+
+    <label for="example_name">Name</label>
+    <input type="text" value="asdf" name="example[name]" id="example_name" />
+    <br/>
+
+    <label for="example_email">Email</label>
+    <input type="text" value="fdas@example.com" name="example[email]" id="example_email" />
+    <br/>
+
+    <label for="example_gender">Gender</label>
+    <input type="radio" value="male" name="example[gender]" id="example_gender_male" /> Male
+    <input type="radio" value="female" checked="checked" name="example[gender]" id="example_gender_female" /> Female
+    <br />
+
+    <input name="example[agree]" type="hidden" value="0" /><input type="checkbox" value="1" name="example[agree]" id="example_agree" /> <label for="example_agree">Agree</label>
+    <br />
+
+    <input type="submit" name="commit" value="Save" class="btn" />
+    <a href="/examples">Cancel</a>
+</form>
+  <br />
+  <pre>example = <span class="example-summary"></pre>
+</div>

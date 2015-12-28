@@ -17,6 +17,7 @@ gem 'pry'
 
 group :development, :test do
   gem 'byebug'
+  gem 'jasmine'
 end
 
 group :development do
