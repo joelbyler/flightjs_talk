@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= handlebars
+//= require underscore
+//= require handlebars
 //= require flight
-//= with_handlebars_view
+//= require with_handlebars_view
 //= require_tree .
