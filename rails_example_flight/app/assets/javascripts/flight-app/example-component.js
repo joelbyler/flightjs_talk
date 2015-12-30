@@ -26,6 +26,13 @@ var ExampleComponent = (function() {
       this.on('change', this.refreshSummary);
       this.trigger('change');
     });
+
+    this.before('refreshSummary', function() {
+      //...
+    });
+    this.after('refreshSummary', function() {
+      //...
+    });
   });
 })();
 

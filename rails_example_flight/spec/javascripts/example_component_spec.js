@@ -9,12 +9,11 @@ describe("ExampleComponent", function() {
     expect($(".example-summary").val()).toEqual("");
   });
 
-  it("include name to json summary", function() {
-    var test_name = 'joe'
-    $('#example_name').val(test_name);
+  it("include name in json summary", function() {
+    $('#example_name').val('joe');
 
     ExampleComponent.attachTo('.example-form');
 
-    expect($(".example-summary").html()).toMatch(test_name);
+    expect($(".example-summary").html()).toMatch('joe');
   });
 });
