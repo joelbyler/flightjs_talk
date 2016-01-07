@@ -9,17 +9,17 @@ describe("ExampleComponent", function() {
     expect($(".example-summary").val()).toEqual("");
   });
 
-  describe("name equals joe", function() {
+  describe("when a name is entered", function() {
     beforeEach(function() {
       $('#example_name').val('joe');
       ExampleComponent.attachTo('.example-form');
     });
 
-    it("includes name in json summary", function() {
+    it("json summary includes the name", function() {
       expect($(".example-summary").html()).toMatch('joe');
     });
 
-    it("name changes in summary", function() {
+    it("name changes are reflected in json summary", function() {
       ChangeValue('#example_name','sally');
       expect($(".example-summary").html()).toMatch('sally');
     });

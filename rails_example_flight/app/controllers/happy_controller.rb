@@ -2,7 +2,7 @@ require 'csv'
 require 'json'
 
 class HappyController < ApplicationController
-
+  @@episodes = nil
   def index
     respond_to do |format|
       format.html { render template: "happy/index" }
@@ -11,6 +11,10 @@ class HappyController < ApplicationController
   end
 
   def bob_ross_episodes
-    @episodes ||= CSV.open(File.join(Rails.root, "lib", "data", "bob-ross-episodes.csv"), headers: true,header_converters: :symbol, converters: :all).readlines.map(&:to_h)
+    @@episodes ||= CSV.open(File.join(Rails.root, "lib", "data", "bob-ross-episodes.csv"), headers: true,header_converters: :symbol, converters: :all).readlines.map(&:to_h)
+  end
+
+  def episodesX
+    @@episodes ||= CSV.open(File.join(Rails.root, "lib", "data", "bob-ross-episodes.csv"), headers: true,header_converters: :symbol, converters: :all).readlines.map(&:to_h)
   end
 end
