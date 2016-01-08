@@ -17,4 +17,5 @@
 //= require handlebars
 //= require flight
 //= require with_handlebars_view
+//= require flight-app/with_json_stringify
 //= require_tree .

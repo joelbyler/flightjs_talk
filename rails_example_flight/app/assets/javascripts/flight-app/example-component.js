@@ -9,31 +9,23 @@ var ExampleComponent = (function() {
     });
 
     this.example = function() {
-      return JSON.stringify({
+      return {
         name: this.select('name').val(),
         email: this.select('email').val(),
         gender: this.select('gender').val(),
         agree: this.select('agree').prop("checked")
-      }, null, 2);
+      };
     }
 
     this.refreshSummary = function(){
-      this.select('summary').text(this.example());
+      this.select('summary').text(this.jsonStringify(this.example()));
     }
 
     this.after('initialize', function () {
-      this.on('keyup', this.refreshSummary);
-      this.on('change', this.refreshSummary);
-      this.trigger('change');
+      this.on('change keyup', this.refreshSummary);
     });
 
-    this.before('refreshSummary', function() {
-      //...
-    });
-    this.after('refreshSummary', function() {
-      //...
-    });
-  });
+  }, withJsonStringify);
 })();
 
 $(document).ready(function () {
