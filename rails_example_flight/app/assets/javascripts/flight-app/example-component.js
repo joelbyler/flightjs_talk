@@ -23,6 +23,7 @@ var ExampleComponent = (function() {
 
     this.after('initialize', function () {
       this.on('change keyup', this.refreshSummary);
+      this.trigger('change');
     });
 
   }, withJsonStringify);
